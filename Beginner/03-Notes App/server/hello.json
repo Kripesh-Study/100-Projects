@@ -1,0 +1,77 @@
+ROLE: You are a Viral Video Scriptwriter and Cultural Data Analyst.
+
+TASK: Generate a 7–8 scene viral short-form video script in JSON format.
+
+INPUT:
+Concept: [1. The Butterfly’s Warning (The Philippines)
+The Data Point (Country & Belief): In the Philippines, a large, dark-colored moth or butterfly entering the house is seen as the spirit of a recently deceased loved one checking in—or a warning of an impending death in the family.
+
+The Analyst's Hook: This beautiful insect isn't just a visitor; it’s a message from someone who has already crossed over.
+
+The Deep Logic (The Why): In many Austronesian cultures, butterflies are viewed as "soul-vessels" due to their metamorphosis. The silent, fluttering movement mimics a whisper, leading to the belief that the dead use these wings to navigate the physical world.
+
+The Visual Prompt for AI Video: Cinematic close-up of a giant, velvet-black moth resting on an antique wooden windowsill at dusk. Dust motes dance in a single shaft of golden light. In the blurred background, a rocking chair moves slightly on its own. Atmospheric, 4k, moody lighting.
+
+Engagement Question: Have you ever had an animal appear right after someone passed away?]
+
+OUTPUT RULES:
+- Strict JSON Format only
+- No explanations
+- Each scene = exactly 5 seconds
+- Total scenes = 8
+- Voiceover = max 15 words per scene
+- Tone = dark, mysterious, atmospheric, slightly unsettling
+- Style = viral YouTube Shorts / TikTok format
+
+JSON STRUCTURE:
+
+{
+  "title": "Create a curiosity-driven viral title based on the concept",
+  "description": "Short engaging description about the folklore mystery",
+  "background_audio":""
+  "tags": ["folklore","mystery","dark stories","viral shorts","animated story","creepy facts"],
+  "thumbnail": {
+    "subtitle": "Create a short, high-curiosity phrase (3-5 words)",
+    "thumbnailsimage": "simple 2D cartoon style, flat vector illustration, dark mysterious theme, glowing eyes, high contrast lighting, minimal background, centered subject, bold shadows, cinematic composition, youtube shorts style, vibrant but eerie colors"
+  },
+  "scenes": [
+    {
+      "image_prompts": [
+        "simple 2D cartoon style, flat vector illustration, cinematic lighting, minimal background, centered subject, eerie mood",
+        "simple 2D cartoon style, flat vector illustration, dramatic shadows, dark tone, minimal background",
+        "simple 2D cartoon style, flat vector illustration, symbolic folklore element, glowing accents, mysterious vibe",
+        "simple 2D cartoon style, flat vector illustration, cultural setting, candlelight, shadow effects, eerie environment",
+        "simple 2D cartoon style, flat vector illustration, supernatural hint, ghostly glow, minimal background",
+        "simple 2D cartoon style, flat vector illustration, tension moment, character fear, dramatic zoom composition",
+        "simple 2D cartoon style, flat vector illustration, fading into darkness, silhouette, mysterious ending",
+        "simple 2D cartoon style, flat vector illustration, bold question text, dark background, glowing elements"
+      ],
+      "video_prompts": [
+        "2D cartoon animation, smooth motion, slow zoom, dark eerie lighting, vertical 9:16",
+        "2D cartoon animation, quick reaction movement, cinematic cuts, expressive characters",
+        "2D cartoon animation, slow glowing effect, subtle motion, atmospheric",
+        "2D cartoon animation, flickering light, shadow movement, suspenseful tone",
+        "2D cartoon animation, floating ghostly effect, slow motion, dark ambiance",
+        "2D cartoon animation, slight camera shake, tension build-up, dramatic zoom",
+        "2D cartoon animation, fade out into darkness, smooth transition",
+        "2D cartoon animation, text pop animation, glow effect, subtle zoom"
+      ],
+      "voiceover": [
+        "Create a strong curiosity hook",
+        "Explain the folklore belief",
+        "Add eerie detail",
+        "Add cultural or historical context",
+        "Increase tension or mystery",
+        "Highlight the danger or warning",
+        "Create suspenseful conclusion",
+        "End with a question forcing engagement"
+      ]
+    }
+  ]
+}
+
+INSTRUCTIONS:
+- Replace ALL voiceovers with original script based on the concept
+- Customize ALL image prompts to match the concept (but KEEP the SAME STYLE wording and break line in each image prompt it is complusory )
+- Keep animation prompts consistent with 2D cartoon viral style and break line in each image prompt it is complusory 
+- Make it highly engaging and curiosity-driven
