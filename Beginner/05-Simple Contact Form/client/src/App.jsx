@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div className='w-full h-screen flex items-center justify-center bg-gray-100'>
-      <form className='flex flex-col items-center gap-2 w-90% max-w-[430px] bg-white px-15 py-10 shadow-xl rounded'>
+      <form className='flex flex-col items-center gap-2 w-90% max-w-107 bg-white px-15 py-10 shadow-xl rounded'>
         <h2 className='mb-4 text-2xl font-bold'>Contact Form</h2>
        {error?<p className='text-red-400 mb-2'> {message}</p>:<p className='text-green-400 mb-2'> {message}</p>}
         <label className='w-full' htmlFor="">
