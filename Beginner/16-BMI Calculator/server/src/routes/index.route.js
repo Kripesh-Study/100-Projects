@@ -4,8 +4,8 @@ import HistoryModel from "../model/history.model.js";
 const route = Router()
 
 route.get("/history", async (req, res) => {
-  console.log(req.session.id)
   req.session.visited = true;
+  console.log(req.session.id)
   try{
     const history = await HistoryModel.find({ session_id: req.sessionID }).sort({ createdAt: -1 })
     res.json(history)
@@ -16,7 +16,7 @@ route.get("/history", async (req, res) => {
 
 route.post("/history", async (req, res) => {
   try {
-    const { score } = req.body
+    const { score,height,weight } = req.body
     console.log(score);
     
 
@@ -27,6 +27,8 @@ route.post("/history", async (req, res) => {
     const savedEntry = await HistoryModel.create({
       session_id: req.sessionID,
       score: Number(score),
+      height:Number(height),
+      weight:Number(weight)
     })
     console.log(savedEntry)
     res.status(201).json(savedEntry)

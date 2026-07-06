@@ -26,7 +26,7 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(session({
-  secret: process.env.SESSION_KEY,
+  secret: process.env.SESSION_KEY || "hello world",
   resave: false,
   saveUninitialized: false,
   rolling: true,

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-const BMICalculator = ({ setBMIScore, setBMIStatus,onHistoryUpdate }) => {
-  const [height, setHeight] = useState(0)
-  const [weight, setWeight] = useState(0)
+const BMICalculator = ({ setBMIScore, setBMIStatus,onHistoryUpdate,height,weight,setHeight,setWeight }) => {
+  
 
 
   const BMICalculatorFnc = async (height, weight) => {
@@ -23,7 +22,7 @@ const BMICalculator = ({ setBMIScore, setBMIStatus,onHistoryUpdate }) => {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ score }),
+        body: JSON.stringify({ score,height,weight }),
       })
       const response = await res.json()
       console.log(response);
@@ -38,11 +37,11 @@ const BMICalculator = ({ setBMIScore, setBMIStatus,onHistoryUpdate }) => {
         <h1>BMI Calculator</h1>
         <label>
           <span>Height:</span>
-          <input className='border rounded-md px-2 py-1 ml-3' type="text" onChange={(e) => setHeight(e.target.value)} />
+          <input className='border rounded-md px-2 py-1 ml-3' type="text" value={height} onChange={(e) => setHeight(e.target.value)} />
         </label>
         <label>
           <span>weight:</span>
-          <input className='border rounded-md px-2 py-1 ml-3' type="text" onChange={(e) => setWeight(e.target.value)} />
+          <input className='border rounded-md px-2 py-1 ml-3' type="text" value={weight} onChange={(e) => setWeight(e.target.value)} />
         </label>
         <button className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-md cursor-pointer' onClick={(e) => {e.preventDefault();BMICalculatorFnc(height, weight);onHistoryUpdate()}}>Check</button>
         {height != 0 && weight != 0 && <input className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-md cursor-pointer' type='reset' />}

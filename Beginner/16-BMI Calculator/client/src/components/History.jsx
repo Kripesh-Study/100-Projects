@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-const History = ({ historyVersion }) => {
+const History = ({ historyVersion,setHeight,setWeight,setBMIScore }) => {
   const [history, setHistory] = useState([])
 
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:2000/history',{
+        const response = await fetch('http://localhost:2000/history',{
           method:"GET",
           credentials:"include",
           headers: {
@@ -27,6 +27,11 @@ const History = ({ historyVersion }) => {
     fetchHistory()
   }, [historyVersion])
 
+  const showDetail = (score,height,weight) =>{
+    setWeight(weight)
+    setHeight(height)
+    setBMIScore(score)
+  }
   useEffect(() => {
     const clearHistoryOnLeave = () => {
       if (navigator.sendBeacon) {
@@ -56,7 +61,7 @@ const History = ({ historyVersion }) => {
       ) : (
         <ul className='space-y-2'>
           {history.map((item) => (
-            <li key={item._id} className='rounded-md bg-gray-50 px-3 py-2 text-sm'>
+            <li onClick={()=>showDetail(item.score,item.height,item.weight)} key={item._id} className='rounded-md bg-gray-50 px-3 py-2 text-sm'>
               BMI: {item.score}
             </li>
           ))}
