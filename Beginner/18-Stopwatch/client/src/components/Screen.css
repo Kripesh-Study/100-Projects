@@ -1,0 +1,26 @@
+.after-circle::after{
+content: "";
+display: block;
+position: absolute;
+bottom: 0%;
+left: 50%;
+width: 14rem;
+transform: translate(-50%,0%);
+height: 14rem;
+border:2px solid gray;
+border-radius: 50%;
+background-color: transparent;
+}
+.after-circle::before{
+content: "";
+display: block;
+position: absolute;
+top: 0%;
+left: 50%;
+width: 14rem;
+transform: translate(-50%,0%);
+height: 14rem;
+border:2px solid gray;
+border-radius: 50%;
+background-color: transparent;
+}
