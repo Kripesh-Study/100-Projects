@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+@import "tailwindcss";
+
+
+@theme{
+    --font-reader:"Bungee Inline", sans-serif;
+}
